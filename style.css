@@ -1,0 +1,230 @@
+/* General Styles */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  color: #fff;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+/* Background Image */
+.background-overlay {
+  background-image: url('OIP.jpeg');
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.4);
+  z-index: -1;
+}
+
+/* Header */
+header {
+  text-align: center;
+  padding: 2rem;
+  background-color: rgba(255, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+}
+
+/* Main Content */
+main {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+/* Player Card */
+.player-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  overflow: hidden;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.player-card:hover {
+  transform: scale(1.03);
+}
+
+.player-img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.player-info {
+  padding: 1rem;
+  background-color: rgba(0,0,0,0.3);
+}
+
+.stats {
+  max-height: 0;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 0 1rem;
+  transition: max-height 0.5s ease, padding 0.5s ease;
+}
+
+.player-card.active .stats {
+  max-height: 200px;
+  padding: 1rem;
+}
+
+.stats ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.stats li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid rgba(255,255,255,0.3);
+}
+
+@media (max-width: 600px) {
+  .player-card {
+    width: 95%;
+  }
+
+  .player-img {
+    height: 180px;
+  }
+}
+.stat {
+  margin-top: 1rem;
+}
+
+.progress {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  overflow: hidden;
+  height: 15px;
+  margin-bottom: 1rem;
+}
+
+.progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, #00ff88, #007bff);
+  width: 0%;
+  transition: width 1s ease-in-out;
+  border-radius: 20px;
+}
+@media (min-width: 768px) {
+  main {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .player-card {
+    flex: 1 1 300px;
+    max-width: 300px;
+  }
+}
+
+/* Poll Section Styling */
+#poll {
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  color: #fff;
+  padding: 2em;
+  margin: 2em auto;
+  max-width: 700px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#poll h2 {
+  text-align: center;
+  font-size: 1.8em;
+  margin-bottom: 1em;
+  color: #fff;
+}
+
+#poll form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75em;
+  align-items: flex-start;
+}
+
+#poll label {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 0.6em 1em;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  width: 100%;
+  font-size: 1.1em;
+}
+
+#poll label:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+#poll input[type="radio"] {
+  margin-right: 10px;
+}
+
+#poll button {
+  margin-top: 1em;
+  padding: 0.6em 1.5em;
+  border: none;
+  background-color: #ff9800;
+  color: #fff;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#poll button:hover {
+  background-color: #e68900;
+}
+
+/* Voting Result Section */
+#result {
+  margin-top: 2em;
+}
+
+#result h3 {
+  font-size: 1.4em;
+  margin-bottom: 1em;
+  color: #fff;
+}
+
+.vote-bar-container {
+  margin-bottom: 1.5em;
+}
+
+.vote-bar-container p {
+  margin: 0 0 0.4em 0;
+  font-size: 1.05em;
+  font-weight: 500;
+}
+
+.progress {
+  background-color: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  height: 18px;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, #00c6ff, #0072ff);
+  width: 0%;
+  transition: width 0.5s ease;
+  border-radius: 20px;
+}
